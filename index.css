@@ -1,40 +1,71 @@
-body {
-    font-family: Arial, sans-serif;
-    line-height: 1.6;
+* {
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
 }
 
-header {
-    background: #333;
-    color: #fff;
-    padding: 1em 0;
+body {
+    background: linear-gradient(45deg, #ff99cc, #ff66ff);
+    font-family: 'Arial', sans-serif;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+}
+
+.container {
     text-align: center;
+    padding: 50px;
+    border-radius: 15px;
+    background: rgba(0, 0, 0, 0.6);
+    width: 80%;
+    max-width: 600px;
 }
 
-nav ul {
-    list-style: none;
-    padding: 0;
+.heart {
+    position: relative;
 }
 
-nav ul li {
-    display: inline;
-    margin: 0 1em;
+.heart::before {
+    content: "❤️";
+    font-size: 70px;
+    position: absolute;
+    top: -20px;
+    left: 50%;
+    transform: translateX(-50%);
 }
 
-nav ul li a {
-    color: #fff;
-    text-decoration: none;
+.message {
+    font-size: 40px;
+    margin: 30px 0;
 }
 
-section {
-    padding: 2em;
-    border-bottom: 1px solid #ccc;
+button {
+    background-color: #ff66ff;
+    border: none;
+    padding: 15px 30px;
+    font-size: 18px;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: 0.3s;
 }
 
-footer {
-    background: #333;
-    color: #fff;
-    text-align: center;
-    padding: 1em 0;
+button:hover {
+    background-color: #ff3399;
 }
+
+#hidden-message {
+    font-size: 24px;
+    margin-top: 30px;
+    display: none;
+}
+
+.yes-btn {
+    background-color: #66ff66;
+}
+
+.no-btn {
+    background-color: #ff6666;
+}
+
