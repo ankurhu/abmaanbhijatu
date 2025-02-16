@@ -1,109 +1,54 @@
-/* Basic resets and styling */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
 body {
-    background: linear-gradient(to bottom right, #f8c8d1, #ffffff);
-    font-family: 'Arial', sans-serif;
-    color: #333;
-    height: 100vh;
-    overflow: hidden;
     display: flex;
     justify-content: center;
     align-items: center;
-}
-
-.main-container {
+    height: 100vh;
+    margin: 0;
+    background-color: #f9e3e3;
+    font-family: 'Arial', sans-serif;
+    flex-direction: column;
+  }
+  
+  .container {
     text-align: center;
-    position: relative;
-    width: 90%;
-    max-width: 800px;
-}
-
-.heart-container {
-    position: relative;
-    margin-bottom: 20px;
-    animation: pulse 2s infinite alternate;
-}
-
-.heart {
-    width: 120px;
-    height: 120px;
-    background: linear-gradient(to right, #ff66cc, #ff3366);
-    clip-path: polygon(50% 0%, 100% 35%, 80% 100%, 50% 75%, 20% 100%, 0% 35%);
-    margin: 0 auto;
-}
-
-.title {
+  }
+  
+  h1 {
     font-size: 2.5em;
-    font-weight: 600;
-    color: #ff6699;
-    margin-top: 30px;
-}
-
-.question-container {
-    margin-top: 30px;
-}
-
-.question-text {
-    font-size: 1.8em;
-    font-weight: 400;
-    color: #333;
-    opacity: 0;
-    animation: fadeInText 1.5s ease forwards;
-}
-
-.next-btn {
-    background-color: #ff3366;
-    color: white;
-    padding: 12px 25px;
-    font-size: 18px;
-    border: none;
-    border-radius: 25px;
+    color: #d32f2f;
+  }
+  
+  .buttons {
     margin-top: 20px;
+  }
+  
+  .yes-button {
+    font-size: 1.5em;
+    padding: 10px 20px;
+    margin-right: 10px;
+    background-color: #4caf50;
+    color: white;
+    border: none;
+    border-radius: 5px;
     cursor: pointer;
-    transition: background-color 0.3s ease;
-    opacity: 0;
-    animation: fadeInButton 2s ease forwards;
-}
-
-.next-btn:hover {
-    background-color: #ff6699;
-}
-
-@keyframes pulse {
-    0% {
-        transform: scale(1);
-    }
-    100% {
-        transform: scale(1.1);
-    }
-}
-
-@keyframes fadeInText {
-    0% {
-        opacity: 0;
-        transform: translateY(20px);
-    }
-    100% {
-        opacity: 1;
-        transform: translateY(0);
-    }
-}
-
-@keyframes fadeInButton {
-    0% {
-        opacity: 0;
-        transform: scale(0.9);
-    }
-    100% {
-        opacity: 1;
-        transform: scale(1);
-    }
-}
+  }
+  
+  .no-button {
+    font-size: 1.5em;
+    padding: 10px 20px;
+    background-color: #f44336;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .gif_container img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+    margin-top: 20px;
+  }
 
 
 
