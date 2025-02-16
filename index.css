@@ -1,3 +1,4 @@
+/* Basic resets and styling */
 * {
     margin: 0;
     padding: 0;
@@ -5,67 +6,121 @@
 }
 
 body {
-    background: linear-gradient(45deg, #ff99cc, #ff66ff);
+    background-color: #000;
     font-family: 'Arial', sans-serif;
-    height: 100vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
     color: white;
-}
-
-.container {
-    text-align: center;
-    padding: 50px;
-    border-radius: 15px;
-    background: rgba(0, 0, 0, 0.6);
-    width: 80%;
-    max-width: 600px;
-}
-
-.heart {
+    height: 100vh;
+    overflow: hidden;
     position: relative;
 }
 
-.heart::before {
-    content: "❤️";
-    font-size: 70px;
-    position: absolute;
-    top: -20px;
-    left: 50%;
-    transform: translateX(-50%);
+.main-container {
+    text-align: center;
+    position: relative;
+    animation: fadeIn 2s ease;
 }
 
-.message {
-    font-size: 40px;
-    margin: 30px 0;
+.heart-container {
+    position: relative;
+    animation: heartBeat 2s infinite;
 }
 
-button {
-    background-color: #ff66ff;
-    border: none;
+.heart {
+    width: 100px;
+    height: 100px;
+    background: linear-gradient(to right, #ff6699, #ff3366);
+    clip-path: polygon(50% 0%, 100% 35%, 80% 100%, 50% 75%, 20% 100%, 0% 35%);
+    margin: 0 auto;
+    position: relative;
+    animation: pulse 1s infinite alternate;
+}
+
+.title {
+    font-size: 3em;
+    margin-top: 20px;
+    font-weight: bold;
+}
+
+.question-container {
+    margin-top: 30px;
+    font-size: 1.8em;
+}
+
+.question-text {
+    font-size: 2em;
+    font-weight: 300;
+}
+
+.next-btn {
+    background-color: #ff0066;
+    color: white;
     padding: 15px 30px;
-    font-size: 18px;
-    border-radius: 8px;
+    font-size: 20px;
+    border: none;
+    border-radius: 50px;
+    margin-top: 30px;
     cursor: pointer;
-    transition: 0.3s;
+    transition: transform 0.3s ease, background-color 0.3s;
 }
 
-button:hover {
+.next-btn:hover {
+    transform: scale(1.1);
     background-color: #ff3399;
 }
 
-#hidden-message {
-    font-size: 24px;
-    margin-top: 30px;
+.hidden-message {
     display: none;
+    margin-top: 30px;
+    font-size: 2em;
+    font-weight: bold;
+    color: #ff66cc;
+    text-align: center;
+    animation: fadeInMessage 2s ease;
 }
 
-.yes-btn {
-    background-color: #66ff66;
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+    }
+    100% {
+        transform: scale(1.2);
+    }
 }
 
-.no-btn {
-    background-color: #ff6666;
+@keyframes heartBeat {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
 }
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes fadeInMessage {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+#particles-js {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+}
+
 
