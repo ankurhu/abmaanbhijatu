@@ -6,82 +6,72 @@
 }
 
 body {
-    background-color: #000;
+    background: linear-gradient(to bottom right, #f8c8d1, #ffffff);
     font-family: 'Arial', sans-serif;
-    color: white;
+    color: #333;
     height: 100vh;
     overflow: hidden;
-    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .main-container {
     text-align: center;
     position: relative;
-    animation: fadeIn 1.5s ease;
+    width: 90%;
+    max-width: 800px;
 }
 
 .heart-container {
     position: relative;
-    animation: heartBeat 2s infinite;
+    margin-bottom: 20px;
+    animation: pulse 2s infinite alternate;
 }
 
 .heart {
-    width: 100px;
-    height: 100px;
-    background: linear-gradient(to right, #ff6699, #ff3366);
+    width: 120px;
+    height: 120px;
+    background: linear-gradient(to right, #ff66cc, #ff3366);
     clip-path: polygon(50% 0%, 100% 35%, 80% 100%, 50% 75%, 20% 100%, 0% 35%);
     margin: 0 auto;
-    position: relative;
-    animation: pulse 1s infinite alternate;
 }
 
 .title {
-    font-size: 3em;
-    margin-top: 20px;
-    font-weight: bold;
-    color: #ff66cc;
+    font-size: 2.5em;
+    font-weight: 600;
+    color: #ff6699;
+    margin-top: 30px;
 }
 
 .question-container {
     margin-top: 30px;
-    font-size: 2em;
-    color: #fff;
 }
 
 .question-text {
-    font-size: 2.5em;
+    font-size: 1.8em;
     font-weight: 400;
+    color: #333;
     opacity: 0;
     animation: fadeInText 1.5s ease forwards;
 }
 
 .next-btn {
-    background-color: #ff0066;
+    background-color: #ff3366;
     color: white;
-    padding: 15px 30px;
-    font-size: 20px;
+    padding: 12px 25px;
+    font-size: 18px;
     border: none;
-    border-radius: 50px;
-    margin-top: 30px;
+    border-radius: 25px;
+    margin-top: 20px;
     cursor: pointer;
-    transition: transform 0.3s ease, background-color 0.3s;
+    transition: background-color 0.3s ease;
     opacity: 0;
     animation: fadeInButton 2s ease forwards;
 }
 
 .next-btn:hover {
-    transform: scale(1.1);
-    background-color: #ff3399;
-}
-
-.hidden-message {
-    display: none;
-    margin-top: 30px;
-    font-size: 2.5em;
-    font-weight: bold;
-    color: #ff66cc;
-    text-align: center;
-    animation: fadeInMessage 1.5s ease;
+    background-color: #ff6699;
 }
 
 @keyframes pulse {
@@ -89,25 +79,7 @@ body {
         transform: scale(1);
     }
     100% {
-        transform: scale(1.2);
-    }
-}
-
-@keyframes heartBeat {
-    0% {
-        transform: rotate(0deg);
-    }
-    100% {
-        transform: rotate(360deg);
-    }
-}
-
-@keyframes fadeIn {
-    0% {
-        opacity: 0;
-    }
-    100% {
-        opacity: 1;
+        transform: scale(1.1);
     }
 }
 
@@ -133,23 +105,6 @@ body {
     }
 }
 
-@keyframes fadeInMessage {
-    0% {
-        opacity: 0;
-    }
-    100% {
-        opacity: 1;
-    }
-}
-
-#particles-js {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    z-index: -1;
-}
 
 
 
