@@ -3,42 +3,58 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Static Webpage</title>
-    <link rel="stylesheet" href="styles.css">
+    <title>Will You Be Mine?</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f5f5f5;
+            margin: 0;
+            padding: 0;
+            text-align: center;
+        }
+        header, section, footer {
+            padding: 20px;
+        }
+        header {
+            background-color: #ff6f61;
+            color: white;
+        }
+        section {
+            background-color: white;
+            margin: 20px auto;
+            padding: 20px;
+            max-width: 800px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        footer {
+            background-color: #ff6f61;
+            color: white;
+        }
+    </style>
 </head>
 <body>
     <header>
-        <h1>Welcome to My Static Webpage</h1>
-        <nav>
-            <ul>
-                <li><a href="#about">About</a></li>
-                <li><a href="#services">Services</a></li>
-                <li><a href="#contact">Contact</a></li>
-            </ul>
-        </nav>
+        <h1>Will You Be Mine?</h1>
     </header>
-    <section id="about">
-        <h2>About Us</h2>
-        <p>This is a simple static webpage created as an example.</p>
+    <section id="story">
+        <h2>Our Story</h2>
+        <p>Write about your favorite memories here...</p>
     </section>
-    <section id="services">
-        <h2>Our Services</h2>
-        <p>We offer a range of services to meet your needs.</p>
-    </section>
-    <section id="contact">
-        <h2>Contact Us</h2>
-        <form action="https://example.com/form-submit" method="POST">
-            <label for="name">Name:</label>
-            <input type="text" id="name" name="name" required>
-            <label for="email">Email:</label>
-            <input type="email" id="email" name="email" required>
-            <label for="message">Message:</label>
-            <textarea id="message" name="message" required></textarea>
-            <button type="submit">Send</button>
-        </form>
+    <section id="proposal">
+        <h2>The Proposal</h2>
+        <p>Will you be my forever partner?</p>
+        <button onclick="showMessage()">Yes!</button>
+        <button onclick="showMessage()">No...</button>
     </section>
     <footer>
-        <p>&copy; 2025 My Static Webpage. All rights reserved.</p>
+        <p>Contact me at: your.email@example.com</p>
     </footer>
+    <script>
+        function showMessage() {
+            alert('You made my day!');
+        }
+    </script>
 </body>
 </html>
+
