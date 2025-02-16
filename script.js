@@ -77,14 +77,14 @@ particlesJS("particles-js", {
 
 // Questions Array
 const questions = [
-    "Are you ready for a journey? 🌟",
-    "What makes you smile the most? 😊",
-    "Do you believe in destiny? 💫",
-    "Do you think our story was written in the stars? ✨",
-    "Would you like to make beautiful memories with me? 📸",
-    "Do you believe love is magical? 🪄",
-    "What if I told you you’re my forever? ❤️",
-    "Would you say yes to spending the rest of your life with me? 💍"
+    "Are you ready for this beautiful journey? 🌟",
+    "What makes your heart skip a beat? 💓",
+    "Can you feel the magic of destiny at work? ✨",
+    "Do you believe in serendipity? 🍀",
+    "Do you feel like we were meant to meet? ❤️",
+    "If I say I want forever with you, would you say yes? 💍",
+    "Would you hold my hand and never let go? 🫶",
+    "And now, the most important question... 💖"
 ];
 
 let currentQuestion = 0;
@@ -94,6 +94,9 @@ function nextQuestion() {
     // Display the next question
     const questionText = document.getElementById('question');
     questionText.innerHTML = questions[currentQuestion];
+    questionText.classList.remove('fadeInText');
+    questionText.offsetHeight; // Trigger reflow to reset animation
+    questionText.classList.add('fadeInText');
 
     // If we reach the final question, change the button text
     if (currentQuestion === questions.length - 1) {
@@ -112,7 +115,8 @@ function revealLoveMessage() {
     const questionContainer = document.querySelector('.question-container');
     const message = document.createElement('div');
     message.classList.add('hidden-message');
-    message.innerHTML = "<p>💖 I want to spend forever with you, will you be mine? 💖</p>";
+    message.innerHTML = "<p>💖 Will you be mine forever? 💖</p>";
     questionContainer.appendChild(message);
 }
+
 
